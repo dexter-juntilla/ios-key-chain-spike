@@ -15,6 +15,9 @@
 		A2D068EE1E4D64F8001D95B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2D068EC1E4D64F8001D95B5 /* LaunchScreen.storyboard */; };
 		A2D068F91E4D64F8001D95B5 /* KeyChainAccessSpikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D068F81E4D64F8001D95B5 /* KeyChainAccessSpikeTests.swift */; };
 		A2D069041E4D64F8001D95B5 /* KeyChainAccessSpikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D069031E4D64F8001D95B5 /* KeyChainAccessSpikeUITests.swift */; };
+		A2D069191E4D8E32001D95B5 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D069181E4D8E32001D95B5 /* KeychainPasswordItem.swift */; };
+		A2D0691B1E4D8E6A001D95B5 /* KeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D0691A1E4D8E6A001D95B5 /* KeychainConfiguration.swift */; };
+		A2D0691D1E4D8E86001D95B5 /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D0691C1E4D8E86001D95B5 /* AccountDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,10 @@
 		A2D068FF1E4D64F8001D95B5 /* KeyChainAccessSpikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyChainAccessSpikeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D069031E4D64F8001D95B5 /* KeyChainAccessSpikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainAccessSpikeUITests.swift; sourceTree = "<group>"; };
 		A2D069051E4D64F8001D95B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2D069181E4D8E32001D95B5 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
+		A2D0691A1E4D8E6A001D95B5 /* KeychainConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainConfiguration.swift; sourceTree = "<group>"; };
+		A2D0691C1E4D8E86001D95B5 /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
+		A2D0691E1E4D8F7E001D95B5 /* KeyChainAccessSpike.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyChainAccessSpike.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +106,13 @@
 		A2D068DF1E4D64F8001D95B5 /* KeyChainAccessSpike */ = {
 			isa = PBXGroup;
 			children = (
+				A2D0691E1E4D8F7E001D95B5 /* KeyChainAccessSpike.entitlements */,
 				A2D068E01E4D64F8001D95B5 /* AppDelegate.swift */,
 				A2D068E21E4D64F8001D95B5 /* ViewController.swift */,
 				A2D068E41E4D64F8001D95B5 /* Main.storyboard */,
+				A2D069181E4D8E32001D95B5 /* KeychainPasswordItem.swift */,
+				A2D0691A1E4D8E6A001D95B5 /* KeychainConfiguration.swift */,
+				A2D0691C1E4D8E86001D95B5 /* AccountDetailsViewController.swift */,
 				A2D068EA1E4D64F8001D95B5 /* Assets.xcassets */,
 				A2D068EC1E4D64F8001D95B5 /* LaunchScreen.storyboard */,
 				A2D068EF1E4D64F8001D95B5 /* Info.plist */,
@@ -198,6 +209,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = HN269HF2N2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					A2D068F31E4D64F8001D95B5 = {
 						CreatedOnToolsVersion = 8.1;
@@ -268,6 +284,9 @@
 				A2D068E91E4D64F8001D95B5 /* KeyChainAccessSpike.xcdatamodeld in Sources */,
 				A2D068E31E4D64F8001D95B5 /* ViewController.swift in Sources */,
 				A2D068E11E4D64F8001D95B5 /* AppDelegate.swift in Sources */,
+				A2D069191E4D8E32001D95B5 /* KeychainPasswordItem.swift in Sources */,
+				A2D0691B1E4D8E6A001D95B5 /* KeychainConfiguration.swift in Sources */,
+				A2D0691D1E4D8E86001D95B5 /* AccountDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KeyChainAccessSpike/KeyChainAccessSpike.entitlements;
 				DEVELOPMENT_TEAM = HN269HF2N2;
 				INFOPLIST_FILE = KeyChainAccessSpike/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -432,6 +452,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KeyChainAccessSpike/KeyChainAccessSpike.entitlements;
 				DEVELOPMENT_TEAM = HN269HF2N2;
 				INFOPLIST_FILE = KeyChainAccessSpike/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -518,6 +539,7 @@
 				A2D0690A1E4D64F8001D95B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2D0690B1E4D64F8001D95B5 /* Build configuration list for PBXNativeTarget "KeyChainAccessSpikeTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +548,7 @@
 				A2D0690D1E4D64F8001D95B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2D0690E1E4D64F8001D95B5 /* Build configuration list for PBXNativeTarget "KeyChainAccessSpikeUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +557,7 @@
 				A2D069101E4D64F8001D95B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
